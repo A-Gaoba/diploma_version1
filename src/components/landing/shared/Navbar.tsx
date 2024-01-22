@@ -33,7 +33,7 @@ const Navbar = () => {
           </li>
         ))}
         <li className=' self-center'>
-          <button type="button" className=' text-white p-2 px-4 rounded-md ml-8 hover:text-white bg-dark-purple hover:bg-sky-400'>Login</button>
+          <button type="button" className=' text-white p-2 px-4 rounded-md ml-8 hover:text-white hover:bg-dark-purple bg-sky-400'>Login</button>
         </li>
       </ul>
 
