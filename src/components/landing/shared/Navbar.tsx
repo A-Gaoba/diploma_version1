@@ -9,12 +9,12 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'About' },
-    { id: 3, text: 'Teachers' },
-    { id: 4, text: 'Students' },
-    { id: 5, text: 'Courses' },
-    { id: 6, text: 'Contact' },
+    { id: 1, text: 'Home', link: '/' },
+    { id: 2, text: 'About', link: '#about' },
+    { id: 3, text: 'Teachers', link: '#teachers' },
+    { id: 4, text: 'Students', link: '#students' },
+    { id: 5, text: 'Courses', link: '#courses' },
+    { id: 6, text: 'Contact', link: '#contact' },
   ];
 
   return (
@@ -27,9 +27,9 @@ const Navbar = () => {
         {navItems.map((item) => (
           <li
             key={item.id}
-            className='px-4 p-2 hover:bg-white rounded-md m-2 cursor-pointer duration-300 hover:text-black'
+            className='px-4 p-2 hover:bg-sky-600 hover:text-dark-purple rounded-md m-2 duration-300 '
           >
-            {item.text}
+            <a href={item.link} className='text-white cursor-pointer'>{item.text}</a>
           </li>
         ))}
         <li className=' self-center'>
@@ -61,7 +61,7 @@ const Navbar = () => {
             className={`p-4 border-b rounded-md hover:text-dark-purple hover:bg-white cursor-pointer ${index === 0 ? 'mt-8' : ''
               }`}
           >
-            {item.text}
+            <a href={item.link}>{item.text}</a>
           </li>
         ))}
 

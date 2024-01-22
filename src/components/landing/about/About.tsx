@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
+    <div id="about" className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
       <h3 className="text-4xl font-bold text-center mb-12">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
           About Us

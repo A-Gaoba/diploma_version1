@@ -17,14 +17,18 @@ interface StudentsProps {
 
 const Students: React.FC<StudentsProps> = ({ students }) => {
   return (
-    <section className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4 w-90 mx-auto my-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Star Students</h1>
+    <section id='students' className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4 w-90 mx-auto my-auto">
+      <h3 className="text-4xl font-bold text-center mb-12">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
+        Star Students
+        </span>
+      </h3>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex justify-center flex-wrap gap-4 w-[90%] 2xl:w-[80%]"
+        className="flex justify-center gap-4 w-[90%] 2xl:w-[80%]"
       >
         {students.map((student) => (
           <motion.div
@@ -40,7 +44,7 @@ const Students: React.FC<StudentsProps> = ({ students }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="w-64 h-72 object-cover rounded-md mb-4 bg-white"
+              className="w-64 h-72 object-contain rounded-md mb-4 bg-white"
             />
             <motion.h2
               initial={{ opacity: 0 }}
