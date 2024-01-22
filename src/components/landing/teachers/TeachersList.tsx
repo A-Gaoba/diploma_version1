@@ -14,8 +14,8 @@ interface TeachersProps {
 
 const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
   return (
-    <section className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
-      <h3 className="text-4xl font-bold self-start px-16 py-8">
+    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
+      <h3 className="text-4xl font-bold self-start px-16 py-8 w-[90%]">
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
           Meat Our Teachers
         </span>
@@ -25,7 +25,7 @@ const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[90%]"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-[90%]"
       >
         {teachers.map((teacher) => (
           <motion.div
@@ -62,7 +62,7 @@ const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
           </motion.div>
         ))}
       </motion.div>
-    </section>
+    </div>
 
   );
 };

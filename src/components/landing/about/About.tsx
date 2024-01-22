@@ -13,7 +13,7 @@ const About = () => {
       >
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
+          <div className="flex  flex-col justify-evenly h-full">
             <div className="flex flex-col justify-center items-start mb-12">
               <h3 className="text-4xl font-bold text-center">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
