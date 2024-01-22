@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-sky-400 relative z-20 flex justify-between items-center h-20 mx-auto px-4 text-white'>
+    <div className='relative z-20 flex justify-between items-center h-20 mx-auto px-4 text-white font-bold md:w-[90%]'>
       {/* Logo */}
       <h1 className='w-full md:text-2xl font-bold'>ALNAHDAH</h1>
 

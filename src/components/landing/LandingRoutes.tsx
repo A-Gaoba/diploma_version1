@@ -1,9 +1,9 @@
 // LandingRoutes.tsx
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Hero from './home/Hero';
 import Navbar from "./shared/Navbar"
+import Hero from './home/Hero';
+import About from './about/About';
 
 const heroData = {
   title: 'Welcome to Al-Nahdah School',
@@ -13,11 +13,10 @@ const heroData = {
 
 const LandingRoutes = () => {
   return (
-    <div>
+    <div >
       <Navbar />
-      <Routes>
-        <Route path="/*" element={<Hero {...heroData} />} />
-      </Routes>
+      <Hero {...heroData} />
+      <About />
     </div>
   );
 };
