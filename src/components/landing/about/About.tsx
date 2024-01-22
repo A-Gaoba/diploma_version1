@@ -14,7 +14,7 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="md:w-[90%] 2xl:w-[80%]"
+        className="md:w-[90%] 2xl:w-[70%]"
         id="about"
       >
         <div className="grid md:grid-cols-2 gap-8 items-center">

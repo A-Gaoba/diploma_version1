@@ -1,20 +1,19 @@
 // LandingRoutes.tsx
 
 import React from 'react';
-import Navbar from "./shared/Navbar"
+import Navbar from './shared/Navbar';
 import Hero from './home/Hero';
 import About from './about/About';
 import Teachers from './teachers/TeachersList';
-import Courses from './courses/CoursesList'
+import Courses from './courses/CoursesList';
 import Students from './students/StudensList';
-
-import { heroData, teachersData, studentsData, coursesData } from './data/data';
 import Footer from './shared/Footer';
-
+import NotFound from './NotFound'; // Import the NotFound component
+import { heroData, teachersData, studentsData, coursesData } from './data/data';
 
 const LandingRoutes = () => {
   return (
-    <div >
+    <div>
       <Navbar />
       <Hero {...heroData} />
       <About />
@@ -22,7 +21,6 @@ const LandingRoutes = () => {
       <Courses courses={coursesData} />
       <Students students={studentsData} />
       <Footer />
-
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex justify-center gap-4 md:w-[90%] 2xl:w-[80%]"
+        className="flex flex-wrap justify-between gap-4 md:w-[90%] 2xl:w-[70%]"
       >
         {teachers.map((teacher) => (
           <motion.div
@@ -41,7 +41,7 @@ const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className=" w-64 h-72 object-cover rounded-md mb-4 bg-white"
+              className=" w-56 h-72 object-cover rounded-md mb-4 bg-white"
             />
             <motion.h2
               initial={{ opacity: 0 }}

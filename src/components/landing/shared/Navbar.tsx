@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='relative z-20 flex justify-between items-center h-20 mx-auto px-4 text-white font-bold md:w-[90%] 2xl:w-[80%]'>
+    <div className='relative z-20 flex justify-between items-center h-20 mx-auto px-4 text-white font-bold md:w-[90%] 2xl:w-[70%]'>
       {/* Logo */}
       <h1 className='w-full md:text-2xl font-bold'>ALNAHDAH</h1>
 
@@ -33,7 +33,7 @@ const Navbar = () => {
           </li>
         ))}
         <li className=' self-center'>
-          <button type="button" className='bg-white text-dark-purple p-2 px-4 rounded-md ml-8 hover:bg-sky-600 hover:text-white'>Login</button>
+          <button type="button" className=' text-white p-2 px-4 rounded-md ml-8 hover:text-white bg-dark-purple hover:bg-sky-400'>Login</button>
         </li>
       </ul>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
 
         {/* Login Button in Mobile Version */}
         <li>
-          <div className='bg-white text-dark-purple font-bold p-4 border-b rounded-xl hover:bg-sky-600 hover:text-white cursor-pointer mt-6'>
+          <div className='text-white font-bold p-4 border-b rounded-xl hover:text-white cursor-pointer mt-6 bg-dark-purple hover:bg-sky-400'>
             <button type='button' className=' rounded-md '>
               Login
             </button>
