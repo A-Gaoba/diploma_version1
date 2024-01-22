@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="flex justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
+    <div className="flex flex-col justify-center items-center bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg shadow-lg py-12 px-4">
+      <h3 className="text-4xl font-bold text-center mb-12">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
+          About Us
+        </span>
+      </h3>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -11,17 +17,10 @@ const About = () => {
         className="w-[90%]"
         id="about"
       >
-
         <div className="grid md:grid-cols-2 gap-8 items-center">
+
           <div className="flex  flex-col justify-evenly h-full">
-            <div className="flex flex-col justify-center items-start mb-12">
-              <h3 className="text-4xl font-bold text-center">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-slate-500">
-                  About Us
-                </span>
-              </h3>
-              <div className=" w-40 h-1 bg-gradient-to-r from-sky-500 to-slate-500"></div>
-            </div>
+            {/* <div className=" w-40 h-1 bg-gradient-to-r from-sky-500 to-slate-500"></div> */}
             <div>
               <h2 className="font-bold text-3xl mb-5">
                 Welcome to Our School Community

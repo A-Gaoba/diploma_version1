@@ -5,6 +5,7 @@ import Navbar from "./shared/Navbar"
 import Hero from './home/Hero';
 import About from './about/About';
 import Teachers from './teachers/TeachersList';
+import Courses from './courses/CoursesList'
 
 const heroData = {
   title: 'Welcome to Al-Nahdah School',
@@ -39,6 +40,42 @@ const teachersData = [
   },
 ];
 
+const coursesData = [
+  {
+    id: 1,
+    title: 'Mathematics 101',
+    description: 'Fundamental concepts of mathematics.',
+    instructor: 'Prof. Smith',
+    duration: '12 weeks',
+    imageUrl: '../../../public/landing/math.png',
+  },
+  {
+    id: 2,
+    title: 'Science Lab Basics',
+    description: 'Introduction to laboratory practices in science.',
+    instructor: 'Dr. Johnson',
+    duration: '8 weeks',
+    imageUrl: '../../../public/landing/science.png',
+  },
+  {
+    id: 1,
+    title: 'Mathematics 101',
+    description: 'Fundamental concepts of mathematics.',
+    instructor: 'Prof. Smith',
+    duration: '12 weeks',
+    imageUrl: '../../../public/landing/math.png',
+  },
+  {
+    id: 2,
+    title: 'Science Lab Basics',
+    description: 'Introduction to laboratory practices in science.',
+    instructor: 'Dr. Johnson',
+    duration: '8 weeks',
+    imageUrl: '../../../public/landing/science.png',
+  },
+
+];
+
 const LandingRoutes = () => {
   return (
     <div >
@@ -46,6 +83,8 @@ const LandingRoutes = () => {
       <Hero {...heroData} />
       <About />
       <Teachers teachers={teachersData} />
+      <Courses courses={coursesData} />
+
     </div>
   );
 };
