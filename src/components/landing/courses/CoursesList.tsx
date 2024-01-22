@@ -30,7 +30,7 @@ const Courses: React.FC<CoursesProps> = ({ courses }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-[90%]"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:w-[90%] 2xl:w-[80%]"
       >
         {courses.map((course) => (
           <motion.div
@@ -38,7 +38,7 @@ const Courses: React.FC<CoursesProps> = ({ courses }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
-            className="p-4 bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 border border-dark-purple border-r-4 rounded-md shadow-md flex flex-col justify-between"
+            className="p-4 shadow-xl shadow-orange-600 bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 border border-dark-purple border-r-4 rounded-md flex flex-col justify-between"
           >
             <div>
               <img

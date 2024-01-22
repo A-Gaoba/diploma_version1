@@ -14,13 +14,12 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="w-[90%]"
+        className="md:w-[90%] 2xl:w-[80%]"
         id="about"
       >
         <div className="grid md:grid-cols-2 gap-8 items-center">
 
           <div className="flex  flex-col justify-evenly h-full">
-            {/* <div className=" w-40 h-1 bg-gradient-to-r from-sky-500 to-slate-500"></div> */}
             <div>
               <h2 className="font-bold text-3xl mb-5">
                 Welcome to Our School Community
