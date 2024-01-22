@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=' bg-sky-300 flex justify-between items-center h-20 mx-auto px-4 text-white'>
+    <div className='bg-sky-400 relative z-20 flex justify-between items-center h-20 mx-auto px-4 text-white'>
       {/* Logo */}
       <h1 className='w-full md:text-2xl font-bold'>ALNAHDAH</h1>
 
@@ -45,7 +45,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <ul
         className={`${isNavOpen
-          ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r boronr-r-gray-900 bg-dark-purple ease-in-out duration-500'
+          ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r boronr-r-gray-900 bg-sky-400 ease-in-out duration-500'
           : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
           }`}
       >

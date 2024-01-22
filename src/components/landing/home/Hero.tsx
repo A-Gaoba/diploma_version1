@@ -9,12 +9,12 @@ interface HeroProps {
 const HeroComponent: React.FC<HeroProps> = ({ title, description, videoFileName }) => {
   return (
     <div className="relative h-screen flex items-center">
-      <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full" >
+      <video autoPlay muted loop className="absolute inset-0 object-cover w-full h-full z-0">
         <source src={`/videos/${videoFileName}`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute inset-0 bg-sky-300 opacity-30"></div>
+      <div className="absolute inset-0 bg-sky-300 opacity-25 "></div>
 
       <div className="container mx-auto text-white z-10 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
