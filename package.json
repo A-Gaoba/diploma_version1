@@ -33,7 +33,8 @@
     "react-router-dom": "^6.21.3",
     "reactstrap": "^9.2.2",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "webext-bridge": "^6.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

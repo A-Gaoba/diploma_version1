@@ -103,8 +103,8 @@ const TeacherProfilePage: React.FC = () => {
   };
 
   return (
-    <div className='flex justify-center items-center h-full'>
-      <div className='w-[90%]'>
+    <div className=" text-black min-h-screen">
+      <div className="container mx-auto p-8">
         <BasicInfo {...teacherData} />
         <CoursesList courses={coursesData} />
         <ExamsAndMarks students={studentsData} exams={examsData} marks={marksData} />

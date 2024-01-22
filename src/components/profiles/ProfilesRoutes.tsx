@@ -1,7 +1,6 @@
-// ProfilesRoutes.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import TeacherProfilePage from './teacher/profile';
+import TeacherProfilePage from './teacher/Home/profile';
 
 const ProfilesRoutes: React.FC = () => {
   return (
@@ -13,3 +12,4 @@ const ProfilesRoutes: React.FC = () => {
 };
 
 export default ProfilesRoutes;
+
