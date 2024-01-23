@@ -11,7 +11,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeInOut' }}
-        className="container mx-auto flex items-center justify-center flex-wrap gap-8 p-8 rounded-lg shadow-lg w-[90%] 2xl:w-[70%]"
+        className="container mx-auto flex items-center justify-center flex-wrap gap-8 p-8 rounded-lg shadow-black shadow-lg w-[90%] 2xl:w-[70%]"
       >
         {/* Contact Information */}
         <motion.div

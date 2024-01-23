@@ -33,7 +33,7 @@ const Teachers: React.FC<TeachersProps> = ({ teachers }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
-            className="p-4 shadow-xl shadow-orange-600 bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg text-dark-purple"
+            className="p-4 shadow-black shadow-lg bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 rounded-lg text-dark-purple"
           >
             <motion.img
               src={teacher.imageUrl}
