@@ -6,6 +6,7 @@ import Hero from './home/Hero';
 import About from './about/About';
 import Teachers from './teachers/TeachersList';
 import Courses from './courses/CoursesList';
+import Contact from "./contact/Contact"
 import Students from './students/StudensList';
 import Footer from './shared/Footer';
 import NotFound from './NotFound'; // Import the NotFound component
@@ -20,6 +21,7 @@ const LandingRoutes = () => {
       <Teachers teachers={teachersData} />
       <Courses courses={coursesData} />
       <Students students={studentsData} />
+      <Contact />
       <Footer />
     </div>
   );
