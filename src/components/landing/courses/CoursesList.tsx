@@ -55,7 +55,7 @@ const Courses: React.FC<CoursesProps> = ({ courses }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className=" bg-dark-purple text-white py-2 px-4 rounded-md mt-4"
+              className=" bg-dark-purple bg-gradient-to-r from-sky-500 to-slate-500 text-white py-2 px-4 rounded-md mt-4"
             >
               Enroll Now
             </motion.button>

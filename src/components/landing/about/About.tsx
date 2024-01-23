@@ -32,7 +32,7 @@ const About = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="py-3 px-6 text-lg bg-dark-purple text-white rounded-lg font-bold hover:bg-sky-300 hover:text-black transition duration-300"
+                className="py-3 px-6 text-lg bg-dark-purple  text-white rounded-lg font-bold hover:bg-sky-300 hover:text-black transition duration-300"
               >
                 Learn More
               </motion.button>
