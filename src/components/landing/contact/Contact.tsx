@@ -44,15 +44,19 @@ const Contact = () => {
           <div className="flex mt-4">
             <a href="#" className="text-dark-purple mr-5">
               <FontAwesomeIcon icon={faFacebook} size="2x" />
+              {/* facebook */}
             </a>
             <a href="#" className="text-dark-purple mr-5">
               <FontAwesomeIcon icon={faTwitter} size="2x" />
+              {/* twitter */}
             </a>
             <a href="#" className="text-dark-purple mr-5">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
+              {/* instagram */}
             </a>
             <a href="#" className="text-dark-purple">
               <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+              {/* whatsapp */}
             </a>
           </div>
         </motion.div>
