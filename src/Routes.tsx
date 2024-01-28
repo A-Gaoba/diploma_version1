@@ -8,7 +8,7 @@ import ProfilesRoutes from './components/profiles/ProfilesRoutes';
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<LandingRoutes />} />
+      <Route path="/*" element={<LandingRoutes />} />
       <Route path="/admin/*" element={<AdminRoutes />} />
       <Route path="/teacher/*" element={<ProfilesRoutes />} />
     </Routes>

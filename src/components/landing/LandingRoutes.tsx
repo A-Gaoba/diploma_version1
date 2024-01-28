@@ -1,27 +1,22 @@
-// LandingRoutes.tsx
-
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './shared/Navbar';
-import Hero from './home/Hero';
-import About from './about/About';
-import Teachers from './teachers/TeachersList';
-import Courses from './courses/CoursesList';
-import Contact from "./contact/Contact"
-import Students from './students/StudensList';
+import Home from './Home';
 import Footer from './shared/Footer';
-import NotFound from './NotFound'; // Import the NotFound component
-import { heroData, teachersData, studentsData, coursesData } from './data/data';
+import NotFound from '../NotFound';
+import Courses from './courses/CoursesList';
+import { coursesData } from './data/data';
+
 
 const LandingRoutes = () => {
   return (
     <div>
       <Navbar />
-      <Hero {...heroData} />
-      <About />
-      <Teachers teachers={teachersData} />
-      <Courses courses={coursesData} />
-      <Students students={studentsData} />
-      <Contact />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/courses' element={<Courses courses={coursesData}/>} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
       <Footer />
     </div>
   );

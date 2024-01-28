@@ -13,12 +13,15 @@ import ClassesList from './dashboard/pages/Classes/Home';
 import CreateClass from './dashboard/pages/Classes/CreateClass';
 import SubjectsList from './dashboard/pages/Subjects/Home';
 import AddSubject from './dashboard/pages/Subjects/AddSubject';
+import Attendence from './dashboard/pages/attendance/Home'
+import NotFound from '../NotFound'; // Import your NotFound component
+
 
 const handleAddStudent = (newStudent) => {
   console.log('Adding new student:', newStudent);
 };
 
-const handleAddTeacher= (newTeacher) => {
+const handleAddTeacher = (newTeacher) => {
   console.log('Adding new teacher:', newTeacher);
 };
 
@@ -36,7 +39,7 @@ const AdminRoutes = () => {
         {/* teachers */}
         <Route path="teachers" element={<TeachersList />} />
         <Route path="/teachers/:id" element={<TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} />} />
-        <Route path="/teachers/add" element={<AddTeacher onAddTeacher={handleAddTeacher}/>} />
+        <Route path="/teachers/add" element={<AddTeacher onAddTeacher={handleAddTeacher} />} />
 
         {/* classes */}
         <Route path="/classes" element={<ClassesList />} />
@@ -45,9 +48,14 @@ const AdminRoutes = () => {
         <Route path="/subjects" element={<SubjectsList />} />
         <Route path="/subjects/add" element={<AddSubject />} />
 
+        <Route path='/attendance' element={<Attendence />} />
+
+        <Route path="*" element={<NotFound />} />
+
+
       </Route>
     </Routes>
   );
-}; 
+};
 
 export default AdminRoutes;
