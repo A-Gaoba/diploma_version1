@@ -16,7 +16,7 @@ const TeacherCard: React.FC<TeacherCardProps> = ({ teacher }) => (
     <p className="text-lg font-semibold">{`${teacher.firstName} ${teacher.lastName}`}</p>
     <p className="text-gray-600">{` ${teacher.subject || 'Not specified'}`}</p>
     <p className="text-gray-600">{`ID: ${teacher.id || 'Not specified'}`}</p>
-    <Link to={`/teachers/${teacher.id}`}>
+    <Link to={`/admin/teachers/${teacher.id}`}>
       <button className="mt-2 bg-dark-purple text-white px-4 py-2 rounded hover:bg-blue-600">View</button>
     </Link>
   </div>

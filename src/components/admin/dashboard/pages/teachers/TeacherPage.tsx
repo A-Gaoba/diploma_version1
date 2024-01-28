@@ -43,6 +43,10 @@ interface TeacherProfileProps {
   bio?: string;
 }
 
+interface TeacherProfileRouteParams {
+  id?: string;
+  [key: string]: string | undefined;
+}
 const AcademicInfo: React.FC<AcademicInfoProps> = ({ label, value }) => (
   <p className="mb-2 md:text-base text-sm">
     <span className="font-bold">{label}:</span> {value || 'N/A'} {/* Use a default value if value is undefined */}
@@ -62,10 +66,7 @@ const TeacherSchedule: React.FC<TeacherScheduleProps> = ({ day, date, time }) =>
 );
 
 const TeacherProfile: React.FC<TeacherProfileProps> = () => {
-  const { id } = useParams<{ id?: string }>();
-  console.log('id:', id);
-  console.log('teachersData:', teachersData);
-
+  const { id } = useParams<TeacherProfileRouteParams>();
   const teacher = teachersData.find((t) => t.id === parseInt(id || '', 10));
 
   if (!teacher) {

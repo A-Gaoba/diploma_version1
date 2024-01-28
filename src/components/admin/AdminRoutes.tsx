@@ -7,7 +7,7 @@ import StudentProfile from './dashboard/pages/students/StudentPage';
 import AddStudent from './dashboard/pages/students/AddStudentForm';
 
 import TeachersList from './dashboard/pages/Teachers/Home';
-// import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
+import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
 // import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
 import ClassesList from './dashboard/pages/Classes//Home';
 // import CreateClass from './dashboard/pages/Classes/CreateClass';
@@ -24,10 +24,16 @@ const AdminRoutes = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
+        {/* students */}
         <Route path="students" element={<Students />} />
-        <Route path="/student/:id" element={<StudentProfile />} />
-        {/* <Route path="/add-student" element={<AddStudent />} /> */}
+        <Route path="/students/:id" element={<StudentProfile />} />
+        <Route path="/students/add" element={<AddStudent onAddStudent={handleAddStudent} />} />
+        {/* teachers */}
         <Route path="teachers" element={<TeachersList />} />
+        {/* <Route path="/teachers/:id" element={<TeacherProfile />} /> */}
+        <Route path="/teachers/:id" element={<TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} />} />
+
+        {/* classes */}
         <Route path="/classes" element={<ClassesList />} />
       </Route>
     </Routes>
