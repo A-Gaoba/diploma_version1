@@ -10,7 +10,7 @@ import { coursesData } from './data/data';
 
 const LandingRoutes = () => {
   return (
-    <div>
+    <div className='bg-white bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />

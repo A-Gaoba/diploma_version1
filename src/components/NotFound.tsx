@@ -3,8 +3,7 @@ import React from 'react';
 const NotFound = () => {
   return (
     <section>
-
-      <div className="bg-white text-white">
+      <div className="bg-gradient-to-r from-orange-100 via-blue-200 to-yellow-50 text-white">
         <div className="flex h-screen">
           <div className="m-auto text-center">
             <div>
