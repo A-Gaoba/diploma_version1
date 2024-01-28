@@ -11,8 +11,8 @@ import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
 import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
 import ClassesList from './dashboard/pages/Classes/Home';
 import CreateClass from './dashboard/pages/Classes/CreateClass';
-// import SubjectsList from './dashboard/pages/Subjects/Home';
-// import AddSubject from './dashboard/pages/Subjects/AddSubject';
+import SubjectsList from './dashboard/pages/Subjects/Home';
+import AddSubject from './dashboard/pages/Subjects/AddSubject';
 
 const handleAddStudent = (newStudent) => {
   console.log('Adding new student:', newStudent);
@@ -41,6 +41,10 @@ const AdminRoutes = () => {
         {/* classes */}
         <Route path="/classes" element={<ClassesList />} />
         <Route path="/classes/create" element={<CreateClass />} />
+
+        <Route path="/subjects" element={<SubjectsList />} />
+        <Route path="/subjects/add" element={<AddSubject />} />
+
       </Route>
     </Routes>
   );
