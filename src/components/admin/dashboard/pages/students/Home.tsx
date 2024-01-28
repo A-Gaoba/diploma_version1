@@ -58,7 +58,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <div className="flex justify-end text-white p-4 ">
-        <Link to="/students/add">
+        <Link to="/admin/students/add">
           <button type='button' className=" bg-dark-purple p-2 text-white flex items-center mb-4">Add Student</button>
         </Link>
       </div>

@@ -8,16 +8,21 @@ import AddStudent from './dashboard/pages/students/AddStudentForm';
 
 import TeachersList from './dashboard/pages/Teachers/Home';
 import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
-// import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
-import ClassesList from './dashboard/pages/Classes//Home';
-// import CreateClass from './dashboard/pages/Classes/CreateClass';
+import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
+import ClassesList from './dashboard/pages/Classes/Home';
+import CreateClass from './dashboard/pages/Classes/CreateClass';
 // import SubjectsList from './dashboard/pages/Subjects/Home';
 // import AddSubject from './dashboard/pages/Subjects/AddSubject';
 
 const handleAddStudent = (newStudent) => {
-  // Add logic to handle adding a new student
   console.log('Adding new student:', newStudent);
 };
+
+const handleAddTeacher= (newTeacher) => {
+  console.log('Adding new teacher:', newTeacher);
+};
+
+
 
 const AdminRoutes = () => {
   return (
@@ -30,14 +35,15 @@ const AdminRoutes = () => {
         <Route path="/students/add" element={<AddStudent onAddStudent={handleAddStudent} />} />
         {/* teachers */}
         <Route path="teachers" element={<TeachersList />} />
-        {/* <Route path="/teachers/:id" element={<TeacherProfile />} /> */}
         <Route path="/teachers/:id" element={<TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} />} />
+        <Route path="/teachers/add" element={<AddTeacher onAddTeacher={handleAddTeacher}/>} />
 
         {/* classes */}
         <Route path="/classes" element={<ClassesList />} />
+        <Route path="/classes/create" element={<CreateClass />} />
       </Route>
     </Routes>
   );
-};
+}; 
 
 export default AdminRoutes;
