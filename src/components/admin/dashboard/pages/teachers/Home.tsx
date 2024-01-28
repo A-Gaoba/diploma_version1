@@ -43,6 +43,11 @@ const HomeTeachers: React.FC = () => {
 
   return (
     <div>
+  <div className="flex justify-end text-white p-4 ">
+        <Link to="/admin/students/add">
+          <button type='button' className=" bg-dark-purple p-2 text-white flex items-center mb-4">Add Student</button>
+        </Link>
+      </div>
       {/* Navbar for filtering */}
       <nav className="bg-white p-4 ">
         <div className="flex items-center">
