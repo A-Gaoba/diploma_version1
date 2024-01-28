@@ -3,7 +3,7 @@
 export const heroData = {
   title: "Welcome to Al-Nahdah School",
   description: "Empowering Minds, Building Futures.",
-  videoFileName: "../../../public/landing/hero.mp4",
+  videoFileName: "../../../public/assets/landing/hero.mp4",
 };
 
 export const teachersData = [
@@ -35,7 +35,6 @@ export const teachersData = [
     imageUrl:
       "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-
 ];
 
 export const studentsData = [
@@ -44,28 +43,28 @@ export const studentsData = [
     name: "John Doe",
     class: "10A",
     achievements: ["Top scorer in Mathematics", "Science fair winner"],
-    imageUrl: "../../../../public/landing/student.png",
+    imageUrl: "assets/landing/student.png",
   },
   {
     id: 2,
     name: "Jane Smith",
     class: "12B",
     achievements: ["National debate champion", "Community service award"],
-    imageUrl: "./landing/student1.png",
+    imageUrl: "./assets/landing/student1.png",
   },
   {
     id: 3,
     name: "Alice Johnson",
     class: "11C",
     achievements: ["Creative writing contest winner", "Outstanding leadership"],
-    imageUrl: "./landing/student1.png",
+    imageUrl: "./assets/landing/student1.png",
   },
   {
     id: 4,
     name: "Bob Anderson",
     class: "9D",
     achievements: ["Mathematics Olympiad participant", "Chess club president"],
-    imageUrl: "/landing/student.png",
+    imageUrl: "assets/landing/student.png",
   },
 ];
 
@@ -76,7 +75,7 @@ export const coursesData = [
     description: "Fundamental concepts of mathematics.",
     instructor: "Prof. Smith",
     duration: "12 weeks",
-    imageUrl: "../../../public/landing/math.png",
+    imageUrl: "assets/landing/math.png",
   },
   {
     id: 2,
@@ -84,7 +83,7 @@ export const coursesData = [
     description: "Introduction to laboratory practices in science.",
     instructor: "Dr. Johnson",
     duration: "8 weeks",
-    imageUrl: "../../../public/landing/science.png",
+    imageUrl: "assets/landing/science.png",
   },
   {
     id: 3,
@@ -92,7 +91,7 @@ export const coursesData = [
     description: "Basic principles of physics.",
     instructor: "Dr. Davis",
     duration: "10 weeks",
-    imageUrl: "../../../public/landing/physics.png",
+    imageUrl: "assets/landing/science.png",
   },
   {
     id: 4,
@@ -100,6 +99,6 @@ export const coursesData = [
     description: "Exploring the world of literature.",
     instructor: "Prof. Anderson",
     duration: "6 weeks",
-    imageUrl: "../../../public/landing/literature.png",
+    imageUrl: "assets/landing/math.png",
   },
 ];
