@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './shared/Navbar';
 import Home from './Home';
 import Footer from './shared/Footer';
-import NotFound from '../NotFound';
+const NotFound = React.lazy(() => import('../NotFound'));
 import Courses from './courses/CoursesList';
 import { coursesData } from './data/data';
 
