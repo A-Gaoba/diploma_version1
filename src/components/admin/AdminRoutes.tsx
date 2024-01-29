@@ -1,21 +1,24 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './dashboard/shared/Layout';
-import Dashboard from './dashboard/Home';
-import Students from './dashboard/pages/students/Home';
-import StudentProfile from './dashboard/pages/students/StudentPage';
-import AddStudent from './dashboard/pages/students/AddStudentForm';
 
-import Teachers from './dashboard/pages/Teachers/Home';
-import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
-import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
-import ClassesList from './dashboard/pages/Classes/Home';
-import CreateClass from './dashboard/pages/Classes/CreateClass';
-import SubjectsList from './dashboard/pages/Subjects/Home';
-import AddSubject from './dashboard/pages/Subjects/AddSubject';
-import Attendence from './dashboard/pages/attendance/Home'
-import NotFound from '../NotFound'; // Import your NotFound component
+const Layout = React.lazy(() => import('./dashboard/shared/Layout'));
+const Dashboard = React.lazy(() => import('./dashboard/Home'));
+const Students = React.lazy(() => import('./dashboard/pages/students/Home'));
+const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
+const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
 
+const Teachers = React.lazy(() => import('./dashboard/pages/Teachers/Home'));
+const TeacherProfile = React.lazy(() => import('./dashboard/pages/Teachers/TeacherPage'));
+const AddTeacher = React.lazy(() => import('./dashboard/pages/Teachers/AddTeacher'));
+
+const ClassesList = React.lazy(() => import('./dashboard/pages/Classes/Home'));
+const CreateClass = React.lazy(() => import('./dashboard/pages/Classes/CreateClass'));
+
+const SubjectsList = React.lazy(() => import('./dashboard/pages/Subjects/Home'));
+const AddSubject = React.lazy(() => import('./dashboard/pages/Subjects/AddSubject'));
+
+const Attendence = React.lazy(() => import('./dashboard/pages/attendance/Home'));
+const NotFound = React.lazy(() => import('../NotFound'));
 
 const handleAddStudent = (newStudent) => {
   console.log('Adding new student:', newStudent);
@@ -25,34 +28,30 @@ const handleAddTeacher = (newTeacher) => {
   console.log('Adding new teacher:', newTeacher);
 };
 
-
-
 const AdminRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Dashboard />} />
+      <Route path="/" element={<React.Suspense fallback={<div>Loading...</div>}><Layout /></React.Suspense>}>
+        <Route index element={<React.Suspense fallback={<div>Loading...</div>}><Dashboard /></React.Suspense>} />
         {/* students */}
-        <Route path="students" element={<Students />} />
-        <Route path="/students/:id" element={<StudentProfile />} />
-        <Route path="/students/add" element={<AddStudent onAddStudent={handleAddStudent} />} />
+        <Route path="students" element={<React.Suspense fallback={<div>Loading...</div>}><Students /></React.Suspense>} />
+        <Route path="/students/:id" element={<React.Suspense fallback={<div>Loading...</div>}><StudentProfile /></React.Suspense>} />
+        <Route path="/students/add" element={<React.Suspense fallback={<div>Loading...</div>}><AddStudent onAddStudent={handleAddStudent} /></React.Suspense>} />
         {/* teachers */}
-        <Route path="teachers" element={<Teachers />} />
-        <Route path="/teachers/:id" element={<TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} />} />
-        <Route path="/teachers/add" element={<AddTeacher onAddTeacher={handleAddTeacher} />} />
+        <Route path="teachers" element={<React.Suspense fallback={<div>Loading...</div>}><Teachers /></React.Suspense>} />
+        <Route path="/teachers/:id" element={<React.Suspense fallback={<div>Loading...</div>}><TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} /></React.Suspense>} />
+        <Route path="/teachers/add" element={<React.Suspense fallback={<div>Loading...</div>}><AddTeacher onAddTeacher={handleAddTeacher} /></React.Suspense>} />
 
         {/* classes */}
-        <Route path="/classes" element={<ClassesList />} />
-        <Route path="/classes/create" element={<CreateClass />} />
+        <Route path="/classes" element={<React.Suspense fallback={<div>Loading...</div>}><ClassesList /></React.Suspense>} />
+        <Route path="/classes/create" element={<React.Suspense fallback={<div>Loading...</div>}><CreateClass /></React.Suspense>} />
 
-        <Route path="/subjects" element={<SubjectsList />} />
-        <Route path="/subjects/add" element={<AddSubject />} />
+        <Route path="/subjects" element={<React.Suspense fallback={<div>Loading...</div>}><SubjectsList /></React.Suspense>} />
+        <Route path="/subjects/add" element={<React.Suspense fallback={<div>Loading...</div>}><AddSubject /></React.Suspense>} />
 
-        <Route path='/attendance' element={<Attendence />} />
+        <Route path='/attendance' element={<React.Suspense fallback={<div>Loading...</div>}><Attendence /></React.Suspense>} />
 
-        <Route path="*" element={<NotFound />} />
-
-
+        <Route path="*" element={<React.Suspense fallback={<div>Loading...</div>}><NotFound /></React.Suspense>} />
       </Route>
     </Routes>
   );
