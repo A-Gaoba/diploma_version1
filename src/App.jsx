@@ -1,4 +1,3 @@
-// App.tsx
 import AllRoutes from './Routes';
 
 const App = () => {

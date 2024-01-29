@@ -6,7 +6,7 @@ import Students from './dashboard/pages/students/Home';
 import StudentProfile from './dashboard/pages/students/StudentPage';
 import AddStudent from './dashboard/pages/students/AddStudentForm';
 
-import TeachersList from './dashboard/pages/Teachers/Home';
+import Teachers from './dashboard/pages/Teachers/Home';
 import TeacherProfile from './dashboard/pages/Teachers/TeacherPage';
 import AddTeacher from './dashboard/pages/Teachers/AddTeacher';
 import ClassesList from './dashboard/pages/Classes/Home';
@@ -37,7 +37,7 @@ const AdminRoutes = () => {
         <Route path="/students/:id" element={<StudentProfile />} />
         <Route path="/students/add" element={<AddStudent onAddStudent={handleAddStudent} />} />
         {/* teachers */}
-        <Route path="teachers" element={<TeachersList />} />
+        <Route path="teachers" element={<Teachers />} />
         <Route path="/teachers/:id" element={<TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} />} />
         <Route path="/teachers/add" element={<AddTeacher onAddTeacher={handleAddTeacher} />} />
 
