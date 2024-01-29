@@ -1,24 +1,24 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-const Layout = React.lazy(() => import('./dashboard/shared/Layout.tsx'));
-const Dashboard = React.lazy(() => import('./dashboard/Home.tsx'));
-const Students = React.lazy(() => import('./dashboard/pages/students/HomeStudents.tsx'));
-const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage.tsx'));
-const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm.tsx'));
+const Layout = React.lazy(() => import('./dashboard/shared/Layout'));
+const Dashboard = React.lazy(() => import('./dashboard/Home'));
+const Students = React.lazy(() => import('./dashboard/pages/students/HomeStudents'));
+const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
+const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
 
-const Teachers = React.lazy(() => import('./dashboard/pages/teachers/HomeTeachers.tsx'));
-const TeacherProfile = React.lazy(() => import('./dashboard/pages/Teachers/TeacherPage.tsx'));
-const AddTeacher = React.lazy(() => import('./dashboard/pages/Teachers/AddTeacher.tsx'));
+const Teachers = React.lazy(() => import('./dashboard/pages/teachers/HomeTeachers'));
+const TeacherProfile = React.lazy(() => import('./dashboard/pages/Teachers/TeacherPage'));
+const AddTeacher = React.lazy(() => import('./dashboard/pages/Teachers/AddTeacher'));
 
-const ClassesList = React.lazy(() => import('./dashboard/pages/classes/HomeClasses.tsx'));
-const CreateClass = React.lazy(() => import('./dashboard/pages/Classes/CreateClass.tsx'));
+const ClassesList = React.lazy(() => import('./dashboard/pages/classes/HomeClasses'));
+const CreateClass = React.lazy(() => import('./dashboard/pages/Classes/CreateClass'));
 
-const SubjectsList = React.lazy(() => import('./dashboard/pages/Subjects/HomeSubjects.tsx'));
-const AddSubject = React.lazy(() => import('./dashboard/pages/Subjects/AddSubject.tsx'));
+const SubjectsList = React.lazy(() => import('./dashboard/pages/Subjects/HomeSubjects'));
+const AddSubject = React.lazy(() => import('./dashboard/pages/Subjects/AddSubject'));
 
-const Attendence = React.lazy(() => import('./dashboard/pages/attendance/HomeAttandence.tsx'));
-const NotFound = React.lazy(() => import('../NotFound.tsx'));
+const Attendence = React.lazy(() => import('./dashboard/pages/attendance/HomeAttandence'));
+const NotFound = React.lazy(() => import('../NotFound'));
 
 const handleAddStudent = (newStudent) => {
   console.log('Adding new student:', newStudent);
