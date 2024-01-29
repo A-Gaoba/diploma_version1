@@ -7,7 +7,7 @@ const Students = React.lazy(() => import('./dashboard/pages/students/Home'));
 const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
 const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
 
-const Teachers = React.lazy(() => import('./dashboard/pages/Teachers/Home'));
+// const Teachers = React.lazy(() => import('./dashboard/pages/Teachers/Home'));
 const TeacherProfile = React.lazy(() => import('./dashboard/pages/Teachers/TeacherPage'));
 const AddTeacher = React.lazy(() => import('./dashboard/pages/Teachers/AddTeacher'));
 
@@ -38,7 +38,7 @@ const AdminRoutes = () => {
         <Route path="/students/:id" element={<React.Suspense fallback={<div>Loading...</div>}><StudentProfile /></React.Suspense>} />
         <Route path="/students/add" element={<React.Suspense fallback={<div>Loading...</div>}><AddStudent onAddStudent={handleAddStudent} /></React.Suspense>} />
         {/* teachers */}
-        <Route path="teachers" element={<React.Suspense fallback={<div>Loading...</div>}><Teachers /></React.Suspense>} />
+        {/* <Route path="teachers" element={<React.Suspense fallback={<div>Loading...</div>}><Teachers /></React.Suspense>} /> */}
         <Route path="/teachers/:id" element={<React.Suspense fallback={<div>Loading...</div>}><TeacherProfile id={1} firstName="John" lastName="Doe" image="teacher.jpg" subject="Math" timeOfClass="9:00 AM" email="john.doe@example.com" degrees={[]} institutions={[]} specializations={[]} awards={[]} subjectsTaught={[]} previousInstitutions={[]} /></React.Suspense>} />
         <Route path="/teachers/add" element={<React.Suspense fallback={<div>Loading...</div>}><AddTeacher onAddTeacher={handleAddTeacher} /></React.Suspense>} />
 
