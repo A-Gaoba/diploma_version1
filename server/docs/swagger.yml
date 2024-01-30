@@ -1,0 +1,278 @@
+openapi: 3.1.0
+info:
+  title: School Management System API
+  description: API managing administrative functionalities for a school, including admins' roles in managing subjects, classes, students, and teachers.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/api
+    description: Internal staging server for testing
+paths:
+  /admins:
+    get:
+      summary: Retrieve Admins
+      description: Retrieves a list of all administrators in the system.
+      responses:
+        "200":
+          description: Successful retrieval of admin list
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  - id: 1
+                    name: admin 1
+                    email: admin1@example.com
+                    role: Admin
+                    schoolName: School A
+                    createdAt: "2023-11-20T23:02:27.255Z"
+                    updatedAt: "2023-11-21T10:00:00.000Z"
+                    subjects: []
+                    Classes: []
+                    students: []
+                    teachers: []
+                  - id: 2
+                    name: admin 2
+                    email: admin2@example.com
+                    role: Admin
+                    schoolName: School B
+                    createdAt: "2023-11-21T00:34:46.659Z"
+                    updatedAt: "2023-11-21T09:30:00.000Z"
+                    subjects: []
+                    Classes: []
+                    students: []
+                    teachers: []
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                success: false
+                message: Error message
+
+    post:
+      summary: Create Admin
+      description: Registers a new administrator in the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Admin"
+      responses:
+        "201":
+          description: Successful creation of admin
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  id: 1
+                  name: admin 1
+                  email: admin1@example.com
+                  role: Admin
+                  schoolName: School A
+                  createdAt: "2023-11-21T00:37:27.592Z"
+                  updatedAt: "2023-11-21T00:37:27.592Z"
+                  subjects: []
+                  Classes: []
+                  students: []
+                  teachers: []
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                success: false
+                message: Error message
+
+  /admins/{id}:
+    get:
+      summary: Get Admin by ID
+      description: Retrieves information about a specific administrator.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the admin to retrieve
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful retrieval of admin details
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  id: 1
+                  name: admin 1
+                  email: admin1@example.com
+                  role: Admin
+                  schoolName: School A
+                  createdAt: "2023-11-20T23:02:27.255Z"
+                  updatedAt: "2023-11-21T10:00:00.000Z"
+                  subjects: []
+                  Classes: []
+                  students: []
+                  teachers: []
+        "404":
+          description: Admin not found
+          content:
+            application/json:
+              example:
+                success: false
+                message: Admin not found
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                success: false
+                message: Error message
+
+    put:
+      summary: Update Admin by ID
+      description: Updates information about a specific administrator.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the admin to update
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Admin"
+      responses:
+        "200":
+          description: Successful update of admin details
+          content:
+            application/json:
+              example:
+                success: true
+                data:
+                  id: 1
+                  name: admin 1 updated
+                  email: admin1@example.com
+                  role: Admin
+                  schoolName: School A
+                  createdAt: "2023-11-20T23:02:27.255Z"
+                  updatedAt: "2023-11-21T12:00:00.000Z"
+                  subjects: []
+                  Classes: []
+                  students: []
+                  teachers: []
+        "404":
+          description: Admin not found
+          content:
+            application/json:
+              example:
+                success: false
+                message: Admin not found
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                success: false
+                message: Error message
+
+    delete:
+      summary: Delete Admin by ID
+      description: Removes information about a specific administrator.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the admin to delete
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Successful removal of admin
+        "404":
+          description: Admin not found
+          content:
+            application/json:
+              example:
+                success: false
+                message: Admin not found
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                success: false
+                message: Error message
+
+components:
+  schemas:
+    Admin:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The admin's unique identifier
+        name:
+          type: string
+          description: The admin's full name
+        email:
+          type: string
+          format: email
+          description: Email address of the admin (must be unique)
+        password:
+          type: string
+          description: Admin's password for authentication
+        role:
+          type: string
+          description: Role of the admin in the school system
+        schoolName:
+          type: string
+          description: Name of the school managed by the admin (must be unique)
+        createdAt:
+          type: string
+          format: date-time
+          description: Date and time when the admin was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Date and time when the admin was last updated
+        subjects:
+          type: array
+          items:
+            $ref: "#/components/schemas/Subject"
+          description: Subjects managed by this admin
+        Classes:
+          type: array
+          items:
+            $ref: "#/components/schemas/Class"
+          description: Classes managed by this admin
+        students:
+          type: array
+          items:
+            $ref: "#/components/schemas/Student"
+          description: Students managed by this admin
+        teachers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Teacher"
+          description: Teachers managed by this admin
+
+    Subject:
+      type: object
+      # Define Subject properties
+
+    Class:
+      type: object
+      # Define Class properties
+
+    Student:
+      type: object
+      # Define Student properties
+
+    Teacher:
+      type: object
+      # Define Teacher properties
