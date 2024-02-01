@@ -4,13 +4,13 @@ import jwt from "jsonwebtoken";
 const transporter = nodemailer.createTransport({
 	host: "smtp.gmail.com",
 	auth: {
-		student: process.env.EMAIL_ADDRESS,
+		user: process.env.EMAIL_ADDRESS,
 		pass: process.env.EMAIL_PASSWORD,
 	},
 });
 
-const generateVerificationLink = (studentId: number) => {
-	const verificationToken = jwt.sign({ id: studentId }, process.env.SECRET as string, {
+const generateVerificationLink = (userId: number) => {
+	const verificationToken = jwt.sign({ id: userId }, process.env.SECRET as string, {
 		expiresIn: "1d",
 	});
 	return `http://localhost:3000/verify-email?token=${verificationToken}`;
