@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import path from "path";
 
-import users from "./routes/users";
+import users from "./src/routes/users";
 
 const app = express();
 const port = 3000;

@@ -1,15 +1,14 @@
 {
-  "name": "School Management System",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start:server": "ts-node index.ts",
-    "start": "nodemon server/index.ts",
+    "start": "nodemon index.ts",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "Abdulrhaman Gaoba",
+  "author": "Abdulrahman Gaoba",
   "license": "ISC",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
@@ -20,6 +19,7 @@
     "@types/node": "^20.10.6",
     "@types/nodemailer": "^6.4.14",
     "nodemon": "^3.0.2",
+    "prisma": "^5.9.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
@@ -32,7 +32,6 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "nodemailer": "^6.9.8",
-    "prisma": "^5.7.1",
     "zod": "^3.22.4"
   }
 }
