@@ -4,8 +4,8 @@ const adminController = require('../controllers/adminController');
 
 
 router.post('/admin', adminController.createAdmin);
-router.get('/admins/:id', adminController.getAdminById);
 router.get('/admins', adminController.getAllAdmins);
+router.get('/admins/:id', adminController.getAdminById);
 router.put('/admins/:id', adminController.updateAdmin);
 router.delete('/admins/:id', adminController.deleteAdmin);
 

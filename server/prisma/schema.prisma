@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String
+
+  // Timestamps for created and updated at
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Student {
+  id          Int     @id @default(autoincrement())
+  firstName   String
+  lastName    String
+  dateOfBirth String // Assuming you store the date as a string for simplicity
+  email       String  @unique
+  phoneNumber String
+  address     String
+  grade       Int
+  class       String
+  city        String
+  image       String?
+
+  // Timestamps for created and updated at
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
