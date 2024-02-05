@@ -45,6 +45,7 @@ const createStudent = async (req, res) => {
 };
 
 const getAllStudents = async (req, res) => {
+  console.log(req.body);
   try {
     const students = await prisma.student.findMany();
     res.status(200).json(students);
@@ -58,6 +59,7 @@ const getAllStudents = async (req, res) => {
 };
 
 const getStudentById = async (req, res) => {
+  console.log(req.body);
   try {
     const id = parseInt(req.params.id, 10);
     const student = await prisma.student.findUnique({
