@@ -3,20 +3,20 @@ const adminRoutes = require("./src/routes/adminRoutes");
 const authRoutes = require("./src/routes/authRoutes");
 const classRoutes = require("./src/routes/classRoutes");
 const studentRoutes = require("./src/routes/studentRoutes");
-const cors = require("cors")
+const cors = require("cors");
 const swagger = require("./docs/swagger");
 
 const app = express();
 
 function createApp() {
-  app.use(cors())
+  app.use(cors());
   app.use(express.json());
   app.use(express.urlencoded());
 
   app.use("/", authRoutes);
   app.use("/", adminRoutes);
   app.use("/", classRoutes);
-  app.use('/', studentRoutes);
+  app.use("/", studentRoutes);
 
   // // Protected route example
   // app.get("/api/protected", authenticateToken, (req, res) => {
