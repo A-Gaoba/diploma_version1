@@ -38,3 +38,28 @@ model Student {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Teacher {
+  id                     Int      @id @default(autoincrement())
+  firstName              String
+  lastName               String
+  image                  String
+  subject                String
+  timeOfClass            String
+  gender                 String?
+  dateOfBirth            String?
+  email                  String
+  phone                  String?
+  degrees                String[]
+  institutions           String[]
+  specializations        String[]
+  yearsOfExperience      Int?
+  previousInstitutions   String[]
+  subjectsTaught         String[]
+  awards                 String[]
+  achievements           String?
+  classSchedule          String?
+  officeLocation         String?
+  preferredCommunication String?
+  bio                    String?
+}
