@@ -34,6 +34,7 @@ model Student {
   city        String
   image       String?
 
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -47,15 +48,15 @@ model Teacher {
   timeOfClass            String
   gender                 String?
   dateOfBirth            String?
-  email                  String   @unique
+  email                  String  @unique
   phone                  String?
-  degrees                String[]
-  institutions           String[]
-  specializations        String[]
-  yearsOfExperience      Int?
-  previousInstitutions   String[]
-  subjectsTaught         String[]
-  awards                 String[]
+  // degrees                String[]
+  // institutions           String[]
+  // specializations        String[]
+  // yearsOfExperience      Int?
+  // previousInstitutions   String[]
+  // subjectsTaught         String[]
+  // awards                 String[]
   achievements           String?
   classSchedule          String?
   officeLocation         String?
