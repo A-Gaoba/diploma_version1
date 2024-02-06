@@ -34,9 +34,24 @@ CREATE TABLE "Teacher" (
     "id" SERIAL NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
+    "image" TEXT NOT NULL,
+    "subject" TEXT NOT NULL,
+    "timeOfClass" TEXT NOT NULL,
+    "gender" TEXT,
+    "dateOfBirth" TEXT,
     "email" TEXT NOT NULL,
     "phone" TEXT,
+    "degrees" TEXT[],
+    "institutions" TEXT[],
+    "specializations" TEXT[],
+    "yearsOfExperience" INTEGER,
+    "previousInstitutions" TEXT[],
+    "subjectsTaught" TEXT[],
+    "awards" TEXT[],
     "achievements" TEXT,
+    "classSchedule" TEXT,
+    "officeLocation" TEXT,
+    "preferredCommunication" TEXT,
     "bio" TEXT,
 
     CONSTRAINT "Teacher_pkey" PRIMARY KEY ("id")
@@ -47,3 +62,6 @@ CREATE UNIQUE INDEX "Admin_email_key" ON "Admin"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Student_email_key" ON "Student"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Teacher_email_key" ON "Teacher"("email");

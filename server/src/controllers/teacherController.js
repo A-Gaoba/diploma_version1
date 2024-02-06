@@ -3,10 +3,40 @@ const prisma = new PrismaClient();
 
 const createTeacher = async (req, res) => {
   try {
-    const { firstName, lastName, email, phone, achievements, bio } = req.body;
+    const {
+      firstName,
+      lastName,
+      image,
+      subject,
+      timeOfClass,
+      gender,
+      dateOfBirth,
+      email,
+      phone,
+      achievements,
+      classSchedule,
+      officeLocation,
+      preferredCommunication,
+      bio,
+    } = req.body;
 
     const newTeacher = await prisma.teacher.create({
-      data: { firstName, lastName, email, phone, achievements, bio },
+      data: {
+        firstName,
+        lastName,
+        image,
+        subject,
+        timeOfClass,
+        gender,
+        dateOfBirth,
+        email,
+        phone,
+        achievements,
+        classSchedule,
+        officeLocation,
+        preferredCommunication,
+        bio,
+      },
     });
 
     res.status(201).json({ success: true, data: newTeacher });
@@ -51,11 +81,41 @@ const getTeacherById = async (req, res) => {
 const updateTeacher = async (req, res) => {
   try {
     const id = parseInt(req.params.id, 10);
-    const { firstName, lastName, email, phone, achievements, bio } = req.body;
+    const {
+      firstName,
+      lastName,
+      image,
+      subject,
+      timeOfClass,
+      gender,
+      dateOfBirth,
+      email,
+      phone,
+      achievements,
+      classSchedule,
+      officeLocation,
+      preferredCommunication,
+      bio,
+    } = req.body;
 
     const updatedTeacher = await prisma.teacher.update({
       where: { id },
-      data: { firstName, lastName, email, phone, achievements, bio },
+      data: {
+        firstName,
+        lastName,
+        image,
+        subject,
+        timeOfClass,
+        gender,
+        dateOfBirth,
+        email,
+        phone,
+        achievements,
+        classSchedule,
+        officeLocation,
+        preferredCommunication,
+        bio,
+      },
     });
 
     res.status(200).json(updatedTeacher);
