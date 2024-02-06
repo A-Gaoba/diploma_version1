@@ -13,19 +13,14 @@ const createTeacher = async (req, res) => {
       dateOfBirth,
       email,
       phone,
-      degrees,
-      institutions,
-      specializations,
-      yearsOfExperience,
-      previousInstitutions,
-      subjectsTaught,
-      awards,
       achievements,
       classSchedule,
       officeLocation,
       preferredCommunication,
       bio,
     } = req.body;
+
+    console.log(req.body);
 
     const newTeacher = await prisma.teacher.create({
       data: {
@@ -38,13 +33,6 @@ const createTeacher = async (req, res) => {
         dateOfBirth,
         email,
         phone,
-        degrees: { set: [degrees] }, // Change to an array
-        institutions: { set: [institutions] }, // Change to an array
-        specializations: { set: [specializations] }, // Change to an array
-        yearsOfExperience,
-        previousInstitutions: { set: [previousInstitutions] }, // Change to an array
-        subjectsTaught: { set: [subjectsTaught] }, // Change to an array
-        awards: { set: [awards] }, // Change to an array
         achievements,
         classSchedule,
         officeLocation,
@@ -105,13 +93,6 @@ const updateTeacher = async (req, res) => {
       dateOfBirth,
       email,
       phone,
-      degrees,
-      institutions,
-      specializations,
-      yearsOfExperience,
-      previousInstitutions,
-      subjectsTaught,
-      awards,
       achievements,
       classSchedule,
       officeLocation,
@@ -131,13 +112,6 @@ const updateTeacher = async (req, res) => {
         dateOfBirth,
         email,
         phone,
-        degrees: { set: degrees },
-        institutions: { set: institutions },
-        specializations: { set: specializations },
-        yearsOfExperience,
-        previousInstitutions: { set: previousInstitutions },
-        subjectsTaught: { set: subjectsTaught },
-        awards: { set: awards },
         achievements,
         classSchedule,
         officeLocation,
