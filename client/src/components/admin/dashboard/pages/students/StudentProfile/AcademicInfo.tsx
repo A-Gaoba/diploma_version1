@@ -1,5 +1,11 @@
 import React from 'react';
-import { AcademicInfoProps } from './index';
+
+
+export interface AcademicInfoProps {
+  label: string;
+  value: string | number;
+}
+
 
 const AcademicInfo: React.FC<AcademicInfoProps> = ({ label, value }) => (
   <p className="mb-2 md:text-base text-sm">

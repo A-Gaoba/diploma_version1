@@ -1,5 +1,14 @@
 import React from 'react';
-import { Teacher } from './index';
+
+
+ interface Teacher {
+  id: number;
+  firstName: string;
+  subject: string;
+  timeOfClass: string;
+  image: string;
+}
+
 
 const TeacherBox: React.FC<{ teacher: Teacher }> = ({ teacher }) => (
   <div className="border p-2 mb-4 rounded-md shadow-md flex flex-col justify-center items-center">
