@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const createStudent = async (studentData: any) => {
+export const addStudent  = async (studentData: any) => {
   try {
     return await axios.post('http://localhost:5000/students', studentData);
   } catch (error) {

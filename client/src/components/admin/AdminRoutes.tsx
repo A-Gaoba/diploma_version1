@@ -5,7 +5,8 @@ const Layout = React.lazy(() => import('./dashboard/shared/Layout'));
 const Dashboard = React.lazy(() => import('./dashboard/Home'));
 const Students = React.lazy(() => import('./dashboard/pages/students/Home/HomeStudents'));
 const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
-const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
+// const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
+const AddStudent = React.lazy(() => import('./dashboard/pages/students/StudentForm/AddStudent.tsx'));
 
 const Teachers = React.lazy(() => import('./dashboard/pages/teachers/HomeTeachers.tsx'));
 const TeacherProfile = React.lazy(() => import('./dashboard/pages/Teachers/TeacherPage.tsx'));
