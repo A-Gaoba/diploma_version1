@@ -1,11 +1,11 @@
 import React from 'react';
 import { useStudentForm } from './useStudentForm'; 
-import StudentFormFields from './StudentFormFields';
+import StudentFormFields from './StudentFormFields'; 
 
 interface AddStudentProps {
-  onAddStudent: (newStudent: any) => void; /
+  onAddStudent: (newStudent: any) => void; 
+}
 
-// Initial values for the form fields
 const initialValues = {
   firstName: '',
   lastName: '',
