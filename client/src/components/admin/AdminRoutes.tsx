@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 const Layout = React.lazy(() => import('./dashboard/shared/Layout'));
 const Dashboard = React.lazy(() => import('./dashboard/Home'));
 const Students = React.lazy(() => import('./dashboard/pages/students/Home/HomeStudents'));
-const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
+const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentProfile/StudentPage'));
 // const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
 const AddStudent = React.lazy(() => import('./dashboard/pages/students/StudentForm/AddStudent.tsx'));
 
