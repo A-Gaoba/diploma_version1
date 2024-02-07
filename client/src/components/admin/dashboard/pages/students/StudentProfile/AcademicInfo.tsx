@@ -6,7 +6,6 @@ export interface AcademicInfoProps {
   value: string | number;
 }
 
-
 const AcademicInfo: React.FC<AcademicInfoProps> = ({ label, value }) => (
   <p className="mb-2 md:text-base text-sm">
     <span className="font-bold">{label}:</span> {value}

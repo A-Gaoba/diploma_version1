@@ -3,8 +3,7 @@ import { useStudentForm } from './useStudentForm';
 import StudentFormFields from './StudentFormFields';
 
 interface AddStudentProps {
-  onAddStudent: (newStudent: any) => void; // Consider using a more specific type than `any` if possible
-}
+  onAddStudent: (newStudent: any) => void; /
 
 // Initial values for the form fields
 const initialValues = {

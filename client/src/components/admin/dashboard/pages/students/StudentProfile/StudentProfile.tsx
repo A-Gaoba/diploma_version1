@@ -1,5 +1,3 @@
-// components/StudentProfile.tsx
-
 import React from 'react';
 import PersonalInfo from './PersonalInfo';
 
