@@ -1,59 +1,26 @@
 import React, { useState } from 'react';
-import { studentsData, StudentPageProps } from '../../data/student';
 import { Link } from 'react-router-dom';
+import { studentsData } from '../../data/student';
+import StudentCard from './StudentCard';
+import Pagination from '../../helps/Pagination';
+import usePagination from '../../helps/usePagination'; 
 
-interface StudentCardProps {
-  student: StudentPageProps;
-  index: number;
-}
 
-const StudentCard: React.FC<StudentCardProps> = ({ student, index }) => (
-  <tr>
-    <td className="border p-1 text-center">{index + 1}</td>
-    <td className="border p-1 text-center">
-      <div className="flex justify-center">
-        <img
-          src={student.image}
-          alt={`${student.firstName} ${student.lastName}`}
-          className="w-8 h-8 object-cover rounded-full bg-dark-purple"
-        />
-      </div>
-    </td>
-    <td className="border p-1 text-center">{`${student.firstName} ${student.lastName}`}</td>
-    <td className="border p-1 text-center">{student.id}</td>
-    <td className="border p-1 text-center">{student.dateOfBirth}</td>
-    <td className="border p-1 text-center">{student.city}</td>
-    <td className="border p-1 text-center">{student.grade}</td>
-    <td className="border p-4 text-center">{student.class}</td>
-    <td className="border p-1 text-center">
-      <Link to={`/admin/students/${student.id}`}>
-        <button type='button' className="bg-dark-purple text-white px-4 py-2 rounded hover:bg-blue-600">View</button>
-      </Link>
-    </td>
-  </tr>
-);
-// Updated Home component
+
 const Home: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-
   const itemsPerPage = 10;
 
-  const filteredStudents = filter
-    ? studentsData.filter((student) => student.class === filter)
-    : studentsData;
+  const filteredStudents = filter ? studentsData.filter(student => student.class === filter) : studentsData;
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedStudents = filteredStudents.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(filteredStudents.length / itemsPerPage);
+  const { currentPage, setCurrentPage, totalPages, paginatedItemsIndex } = usePagination(filteredStudents.length, itemsPerPage);
+  const paginatedStudents = filteredStudents.slice(paginatedItemsIndex.startIndex, paginatedItemsIndex.endIndex);
+
 
   const handleFilterClick = (selectedFilter: string | null) => {
     setFilter(selectedFilter);
     setCurrentPage(1);
   };
-
-  const showPagination = filteredStudents.length > itemsPerPage;
 
   return (
     <div>
@@ -107,23 +74,8 @@ const Home: React.FC = () => {
         </tbody>
       </table>
 
-      <p className="text-sm text-gray-600 mt-4">
-        Showing {startIndex + 1} to {endIndex} of {filteredStudents.length} entries
-      </p>
-
-      {showPagination && (
-        <div className="flex justify-center items-center mt-8">
-          {[...Array(totalPages)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              className={`px-4 py-2 ${currentPage === index + 1 ? 'bg-dark-purple text-white' : 'bg-white'}`}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Pagination */}
+      <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={setCurrentPage} />
     </div>
   );
 };
