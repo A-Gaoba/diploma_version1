@@ -1,12 +1,11 @@
-
 export interface StudentPageProps {
   id: number;
   firstName: string;
   lastName: string;
   dateOfBirth: string;
-  email?: string; // Assuming email is optional
-  phoneNumber?: string; // Assuming phoneNumber is optional
-  address?: string; // Assuming address is optional
+  email: string;
+  phoneNumber: string;
+  address: string;
   grade: number;
   class?: string;
   city: string;

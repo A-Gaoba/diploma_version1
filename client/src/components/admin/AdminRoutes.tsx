@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 const Layout = React.lazy(() => import('./dashboard/shared/Layout'));
 const Dashboard = React.lazy(() => import('./dashboard/Home'));
-const Students = React.lazy(() => import('./dashboard/pages/students/HomeStudents'));
+const Students = React.lazy(() => import('./dashboard/pages/students/Home/HomeStudents'));
 const StudentProfile = React.lazy(() => import('./dashboard/pages/students/StudentPage'));
 const AddStudent = React.lazy(() => import('./dashboard/pages/students/AddStudentForm'));
 
@@ -19,6 +19,8 @@ const AddSubject = React.lazy(() => import('./dashboard/pages/Subjects/AddSubjec
 
 const Attendence = React.lazy(() => import('./dashboard/pages/attendance/HomeAttandence'));
 const NotFound = React.lazy(() => import('../NotFound'));
+
+
 
 const handleAddStudent = (newStudent) => {
   console.log('Adding new student:', newStudent);

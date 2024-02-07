@@ -41,7 +41,8 @@
     "reactstrap": "^9.2.2",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "webext-bridge": "^6.0.1"
+    "webext-bridge": "^6.0.1",
+    "yup": "^1.3.3"
   },
   "devDependencies": {
     "@types/node": "^20.11.16",

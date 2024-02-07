@@ -60,24 +60,6 @@ const AddStudentForm: React.FC<AddStudentFormProps> = ({ onAddStudent }) => {
     }
   };
 
-  // const handleSubmit = (e: FormEvent) => {
-  //   e.preventDefault();
-  //   onAddStudent(formData);
-  //   setFormData({
-  //     id: 0,
-  //     firstName: '',
-  //     lastName: '',
-  //     dateOfBirth: new Date(),
-  //     email: '',
-  //     phoneNumber: '',
-  //     address: '',
-  //     grade: 0,
-  //     class: '',
-  //     city: '',
-  //     image: '',
-  //   });
-  //   setImageFile(null);
-  // };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();

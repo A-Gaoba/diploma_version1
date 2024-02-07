@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { studentsData } from '../../data/student';
+import { studentsData } from '../../../data/student';
 import StudentCard from './StudentCard';
-import Pagination from '../../helps/Pagination';
-import usePagination from '../../helps/usePagination'; 
+import Pagination from '../../../helps/Pagination';
+import usePagination from '../../../helps/usePagination';
 
 
 

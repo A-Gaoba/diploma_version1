@@ -1,5 +1,5 @@
 import React from 'react';
-import { StudentPageProps } from './StudentInterface';
+import { StudentPageProps } from '../StudentInterface';
 import { Link } from 'react-router-dom';
 
 interface StudentCardProps {

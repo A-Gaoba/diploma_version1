@@ -2,7 +2,12 @@ import React from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
 
-const AddStudent = () => {
+
+interface AddStudentProps {
+  onAddStudent: (newStudent: any) => void;
+}
+
+const AddStudent: React.FC<AddStudentProps> = ({ onAddStudent }) =>  {
   const formik = useFormik({
     initialValues: {
       firstName: '',
