@@ -1,6 +1,5 @@
 import React from 'react';
 
-
  interface Teacher {
   id: number;
   firstName: string;
