@@ -4,12 +4,12 @@ import { teachersData, TeacherPageProps } from '../../data/teachers';
 
 interface PersonalInfoProps {
   label: string;
-  value?: string | number; // Make value optional
+  value?: string | number;
 }
 
 interface AcademicInfoProps {
   label: string;
-  value?: string | number; // Make value optional
+  value?: string | number; 
 }
 
 interface TeacherScheduleProps {
