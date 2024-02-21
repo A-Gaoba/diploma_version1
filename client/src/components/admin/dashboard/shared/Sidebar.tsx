@@ -43,7 +43,7 @@ const Sidebar = () => {
             onMouseLeave={handleMouseLeave}
           >
             <img
-              src={`../../../../../public/assets/admin/${item.src}.svg`}
+              src={`/assets/admin/${item.src}.svg`}
               alt="image of the element"
               className="w-5 h-5"
             />
@@ -70,7 +70,7 @@ const Sidebar = () => {
         <div className="flex items-center">
           <div className="flex gap-x-4 items-center ">
             <img
-              src="../../../../../public/assets/admin/logo.svg"
+              src="/assets/admin/logo.svg"
               alt="logo"
               className="cursor-pointer w-12 h-12"
             />
@@ -80,7 +80,7 @@ const Sidebar = () => {
           </div>
         </div>
         <img
-          src="../../../../../public/assets/admin//control.svg"
+          src="/assets/admin/control.svg"
           alt="image for control"
           className={`absolute cursor-pointer -right-3 top-11 w-7 bg-dark-purple border-dark-purple border-2 rounded-full  ${!isOpen && "rotate-180"
             }`}
@@ -97,7 +97,7 @@ const Sidebar = () => {
                 onClick={() => toggleSubMenu(index)}
               >
                 <img
-                  src={`../../../../../public/assets/admin/${menu.src}.svg`}
+                  src={`/assets/admin/${menu.src}.svg`}
                   alt="image of the element"
                   className="w-6 h-6"
                 />
