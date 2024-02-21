@@ -9,8 +9,6 @@ const Login = ({ onLogin }) => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Implement your authentication logic here
-    // For simplicity, let's assume authentication is successful for any username and password
     if (username === "admin" && password === "admin") {
       onLogin(username, password);
       navigate("/");
