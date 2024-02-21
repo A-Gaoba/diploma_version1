@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { classes } from '../../data/index'; // You need to replace this with your actual data
+import { classes } from '../../data/index';
 
 const ClassTable: React.FC = () => {
   return (
