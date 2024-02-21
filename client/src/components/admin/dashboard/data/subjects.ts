@@ -1,5 +1,3 @@
-// subjectsData.ts
-
 export interface Subject {
   name: string;
   teacher: string;
