@@ -1,5 +1,3 @@
-// components/StudentPage.tsx
-
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import StudentProfile from './StudentProfile';
