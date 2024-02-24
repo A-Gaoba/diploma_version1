@@ -1,2 +1,2 @@
 # diploma repo
-the diploma project 
+the diploma project about 
