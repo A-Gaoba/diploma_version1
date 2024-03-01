@@ -1,4 +1,3 @@
-// authController.js
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { PrismaClient } = require("@prisma/client");
@@ -14,7 +13,6 @@ exports.register = async (req, res) => {
   try {
     const { name, email, password, schoolName } = req.body;
 
-    // Check if the admin with the same email already exists
     const existingAdmin = await prisma.admin.findUnique({ where: { email } });
     if (existingAdmin) {
       return res
@@ -22,7 +20,6 @@ exports.register = async (req, res) => {
         .json({ message: "Admin with this email already exists" });
     }
 
-    // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create new admin

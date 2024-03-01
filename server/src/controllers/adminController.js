@@ -41,7 +41,6 @@ const getAdminById = async (req, res) => {
     const { id } = req.params;
     const admin = await prisma.admin.findUnique({
       where: { id: parseInt(id) },
-      // Include relations here if needed
     });
 
     if (!admin) {
