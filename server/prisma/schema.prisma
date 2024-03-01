@@ -10,13 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Admin {
-  id       Int    @id @default(autoincrement())
-  name     String
-  email    String @unique
-  password String
 
-  // Timestamps for created and updated at
+model Role {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  admins Admin[]
+}
+model Admin {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  roleId    Int
+  role      Role     @relation(fields: [roleId], references: [id])
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -62,4 +69,3 @@ model Teacher {
   preferredCommunication String?
   bio                    String?
 }
-
