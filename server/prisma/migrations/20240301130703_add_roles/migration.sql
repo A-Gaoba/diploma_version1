@@ -1,9 +1,18 @@
 -- CreateTable
+CREATE TABLE "Role" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "Role_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Admin" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
+    "roleId" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
@@ -51,6 +60,9 @@ CREATE TABLE "Teacher" (
 );
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Role_name_key" ON "Role"("name");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Admin_email_key" ON "Admin"("email");
 
 -- CreateIndex
@@ -58,3 +70,6 @@ CREATE UNIQUE INDEX "Student_email_key" ON "Student"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Teacher_email_key" ON "Teacher"("email");
+
+-- AddForeignKey
+ALTER TABLE "Admin" ADD CONSTRAINT "Admin_roleId_fkey" FOREIGN KEY ("roleId") REFERENCES "Role"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
