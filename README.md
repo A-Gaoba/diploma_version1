@@ -1,1 +1,2 @@
-# Diploma Project
+# Diploma Project - School Managment System
+
